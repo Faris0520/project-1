@@ -1,0 +1,104 @@
+@import url('');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #00666d;
+}
+
+.quotebox {
+    width: 700px;
+    margin: 0 auto;
+    background: #fff;
+    position: absolute;
+    top: 50%;
+    text-align: center;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.1);
+}
+
+.quotebox blockquote {
+    font-size: 25px;
+    min-height: 111px;
+}
+
+.quotebox h2 {
+    font-size: 30px;
+    color: #333;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.quotebox button img {
+    width: 20px;
+    margin-left: 10px;
+}
+
+.quotebox button:nth-child(2) {
+    background: transparent;
+    color: #333;
+}
+
+.quotebox h2::after {
+    content: '';
+    width: 74px;
+    height: 2px;
+    border-radius: 3px;
+    background: rgb(23, 124, 230);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -10px;
+}
+
+.quotebox blockquote::before,
+.quotebox blockquote::after {
+    content: '"';
+}
+
+.quotebox span {
+    display: block;
+    margin-top: 10px;
+    float: right;
+    position: relative;
+}
+
+.quotebox span::before {
+    content: '-';
+    position: absolute;
+    width: 20px;
+    height: 2px;
+    left: -17px;
+    top: 0%;
+    color: rgb(23, 124, 229);
+}
+
+.quotebox div {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.quotebox button {
+    background: rgb(23, 125, 230);
+    color: #fff;
+    border: 1px solid rgb(23, 125, 230);
+    border-radius: 25px;
+    cursor: pointer;
+    width: 149px;
+    align-items: center;
+    height: 49px;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    margin: 5px;
+}

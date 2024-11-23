@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quotes of the Day</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="icon" href="https://i.imgur.com/VMGUT9c.png">
+    <meta name="logo" content="https://i.imgur.com/VMGUT9c.png">
+</head>
+<body>
+    <div class="quotebox">
+        <h2>Quotes of the Day</h2>
+        <blockquote id="quotes">Loading..</blockquote>
+        <span id="author"> </span>
+        <div>
+            <button onclick="getQuote()">New Quote</button>
+        </div>
+    </div>
+
+    <script>
+        async function getQuote() {
+            const response = await fetch('/quote');
+            const data = await response.json();
+            document.getElementById('quotes').innerHTML = data.quote;
+            document.getElementById('author').innerHTML = data.author;
+        }
+        getQuote();
+    </script>
+</body>
+</html>
